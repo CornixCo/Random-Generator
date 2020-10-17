@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random color generator</title>
+<meta charset="UTF-8">
+<meta name="description" content="Random color generator using fisher–yates shuffle algorithm">
+<meta name="keywords" content="Random Generators">
+<meta name="author" content="Corvus Cornix">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="style.css"/>
+<script src="shuffle.js"></script>
+
+</head>
+<body>
+
+
+  <style>
+   * {
+    box-sizing: border-box;
+    color: #454845;
+    font-size: 1.4rem;
+    padding: 0;
+    margin: 0;
+  }
+    #outputs{
+      display: hidden!important;
+    }
+    #output{
+      background: transparent;
+      border: none;
+      color: white;
+      text-shadow: 0em 0.1em 0.1em rgba(0,0,0,0.4);
+      text-align: center;
+    }
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #button {
+    background-color: rgba(220,220,235,0.5);
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all ease 0.3s;
+  }
+    #colorinfo{
+      font-weight: 200;
+      font-size: 14px;
+      text-align: center;
+
+    }
+    #copy{
+      background: transparent;
+      padding: 10px;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 300;
+    }
+
+  #button:hover {
+    background-color: rgba(220,220,235,0.7);
+    transition: all ease 0.3s;
+  }
+
+  #output,
+  #button {
+    padding: 1rem;
+  }
+  </style>
+  <div id="container" onclick="generate();">
+    <p id="colorinfo">
+      Tap on background to change color, than click button to copy color
+    </p>
+    <input type="text"  id="output" value="" onclick="myFunctions();"></input>
+
+  <button id="copy" onclick="myFunctions();">Copy</button>
+    </div>
+  </div>
+
+  <script>
+function generate() {
+
+  var hexValues = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e"];
+
+
+
+  function populate(b) {
+    hexValues = shuffle(hexValues);
+    var a = hexValues.join('');
+    var b = '#' + a.slice(0, 6);
+
+    return b;
+  }
+  var newColor1 = populate('#');
+
+  document.getElementById("container").style.backgroundColor = newColor1;
+  document.getElementById("output").innerHTML = newColor1;
+  document.getElementById("output").value = newColor1;
+
+}
+
+generate();
+</script>
+
+<script>
+function myFunctions() {
+  var copyText = document.getElementById('output');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+
+
+<div class="blockmenus">
+<div class="carded">
+<a class="carde" href="coin.html">
+<img loading="lazy" src="2020/04/coin.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Coin Flip
+</h4>
+<p>
+Random coin flip using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="color.html">
+<img loading="lazy" src="2020/01/color-wheel.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Color Generator
+</h4>
+<p>
+Random color generator that contain all color combinations using Fisher-Yates algorithm
+</p>
+</a>
+<a class="carde" href="password.html">
+<img loading="lazy" src="2020/01/digital-key.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Password Generator
+</h4>
+<p>
+Random password generator with lots of settings.
+</p>
+</a>
+<a class="carde" href="alphabet.html">
+<img loading="lazy" src="2020/01/alphabet.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random alphabet letter
+</h4>
+<p>
+Random Alphabet letter using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="gradient.html">
+<img loading="lazy" src="2020/03/brush.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Gradient Generator
+</h4>
+<p>
+Random gradient color generator that contain all color combinations using Fisher-Yates algorithm.
+</p>
+</a>
+<a class="carde" href="country.html">
+<img loading="lazy" src="2020/04/world.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Country Generator
+</h4>
+<p>
+Random country name using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="yesno.html">
+<img loading="lazy" src="2020/03/wrong.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Yes or No
+</h4>
+<p>
+Random Yes or No using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="numbers.html">
+<img loading="lazy" src="2020/03/countdown.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Numbers Generator
+</h4>
+<p>
+Random number generator with lot of options.
+</p>
+</a>
+<a class="carde" href="rock.html">
+<img loading="lazy" src="2020/03/gaming.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Rock paper scissors
+</h4>
+<p>
+Random Rock paper scissors using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="cards.html">
+<img loading="lazy" src="2020/03/poker.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Card
+</h4>
+<p>
+Random Playing Cards using Fisher-Yates algorthm
+
+    </p>
+</a>
+<a class="carde" href="ball.html">
+<img loading="lazy" src="2020/04/eight.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Magic 8-Ball
+</h4>
+<p>
+Random Magic 8-Ball using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="states.html">
+<img loading="lazy" src="2020/04/america.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random US States
+</h4>
+<p>
+Random US States using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="dice.html">
+<img loading="lazy" src="2020/04/dice.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Dice
+</h4>
+<p>
+Random Roll the dice using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="choise.html">
+<img loading="lazy" src="2020/04/choises.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Choise
+</h4>
+<p>
+Random Choise generator
+</p>
+</a>
+</div>
+</div>
+
+
+</body>
+</html>

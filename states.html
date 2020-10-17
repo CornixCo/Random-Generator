@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random US States generator</title>
+<meta charset="UTF-8">
+<meta name="description" content="Random US States generator using fisher–yates shuffle algorithm">
+<meta name="keywords" content="Random Generators">
+<meta name="author" content="Corvus Cornix">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="style.css"/>
+<script src="shuffle.js"></script>
+
+</head>
+<body>
+
+  <style>
+
+  #copy{
+  width:200px!important;
+  height: 30px!important;
+  background: white;
+  color: black!important;
+  }
+  </style>
+
+  <p>
+  Tap on the screen to generate random country.
+</p>
+<input type="text" id="coins" value="" style=" display:block!important;
+width: 400px!important;
+height: 400px!important;
+font-size: 60px;
+font-weight: 700;
+text-align: center;
+color: white;
+text-transform: uppercase;
+margin-left: auto;
+margin-right: auto;
+border: 0px solid black!important;
+                         text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+background: transparent" onclick="myFunction();"></input>
+
+<input type="text" id="coins" value="" onclick="myFunctions();"></input>
+
+<button id="copy" onclick="myFunctions();">Copy</button>
+
+<style>
+  #coins{
+    display: none;
+  }
+</style>
+
+<script>
+function myFunction() {
+
+var arr = ["Alaska",
+                  "Alabama",
+                  "Arkansas",
+                  "American Samoa",
+                  "Arizona",
+                  "California",
+                  "Colorado",
+                  "Connecticut",
+                  "District of Columbia",
+                  "Delaware",
+                  "Florida",
+                  "Georgia",
+                  "Guam",
+                  "Hawaii",
+                  "Iowa",
+                  "Idaho",
+                  "Illinois",
+                  "Indiana",
+                  "Kansas",
+                  "Kentucky",
+                  "Louisiana",
+                  "Massachusetts",
+                  "Maryland",
+                  "Maine",
+                  "Michigan",
+                  "Minnesota",
+                  "Missouri",
+                  "Mississippi",
+                  "Montana",
+                  "North Carolina",
+                  " North Dakota",
+                  "Nebraska",
+                  "New Hampshire",
+                  "New Jersey",
+                  "New Mexico",
+                  "Nevada",
+                  "New York",
+                  "Ohio",
+                  "Oklahoma",
+                  "Oregon",
+                  "Pennsylvania",
+                  "Puerto Rico",
+                  "Rhode Island",
+                  "South Carolina",
+                  "South Dakota",
+                  "Tennessee",
+                  "Texas",
+                  "Utah",
+                  "Virginia",
+                  "Virgin Islands",
+                  "Vermont",
+                  "Washington",
+                  "Wisconsin",
+                  "West Virginia",
+                  "Wyoming"
+
+];
+
+
+
+
+
+arr = shuffle(arr);
+
+
+var chosen = arr;
+
+document.getElementById("coins").innerHTML = chosen[0];
+
+var element = document.getElementById("coins");
+
+document.getElementById('coins').value = chosen[0];
+  document.getElementById('coin').value = chosen[0];
+}
+</script>
+<script>
+$('button').on('click', function() { $(this).addClass('animated zoomIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() { $(this).removeClass('animated zoomIn'); }); });
+</script>
+<script>
+function myFunctions() {
+  var copyText = document.getElementById('coins');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+
+<style>
+  #copy{
+    border: 1px solid #CE93D8;
+    background: transparent;
+    color: #CE93D8!important;
+    border-radius: 5px;
+  }
+</style>
+
+
+<div class="blockmenus">
+<div class="carded">
+<a class="carde" href="coin.html">
+<img loading="lazy" src="2020/04/coin.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Coin Flip
+</h4>
+<p>
+Random coin flip using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="color.html">
+<img loading="lazy" src="2020/01/color-wheel.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Color Generator
+</h4>
+<p>
+Random color generator that contain all color combinations using Fisher-Yates algorithm
+</p>
+</a>
+<a class="carde" href="password.html">
+<img loading="lazy" src="2020/01/digital-key.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Password Generator
+</h4>
+<p>
+Random password generator with lots of settings.
+</p>
+</a>
+<a class="carde" href="alphabet.html">
+<img loading="lazy" src="2020/01/alphabet.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random alphabet letter
+</h4>
+<p>
+Random Alphabet letter using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="gradient.html">
+<img loading="lazy" src="2020/03/brush.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Gradient Generator
+</h4>
+<p>
+Random gradient color generator that contain all color combinations using Fisher-Yates algorithm.
+</p>
+</a>
+<a class="carde" href="country.html">
+<img loading="lazy" src="2020/04/world.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Country Generator
+</h4>
+<p>
+Random country name using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="yesno.html">
+<img loading="lazy" src="2020/03/wrong.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Yes or No
+</h4>
+<p>
+Random Yes or No using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="numbers.html">
+<img loading="lazy" src="2020/03/countdown.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Numbers Generator
+</h4>
+<p>
+Random number generator with lot of options.
+</p>
+</a>
+<a class="carde" href="rock.html">
+<img loading="lazy" src="2020/03/gaming.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Rock paper scissors
+</h4>
+<p>
+Random Rock paper scissors using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="cards.html">
+<img loading="lazy" src="2020/03/poker.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Card
+</h4>
+<p>
+Random Playing Cards using Fisher-Yates algorthm
+
+    </p>
+</a>
+<a class="carde" href="ball.html">
+<img loading="lazy" src="2020/04/eight.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Magic 8-Ball
+</h4>
+<p>
+Random Magic 8-Ball using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="states.html">
+<img loading="lazy" src="2020/04/america.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random US States
+</h4>
+<p>
+Random US States using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="dice.html">
+<img loading="lazy" src="2020/04/dice.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Dice
+</h4>
+<p>
+Random Roll the dice using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="choise.html">
+<img loading="lazy" src="2020/04/choises.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Choise
+</h4>
+<p>
+Random Choise generator
+</p>
+</a>
+</div>
+</div>
+
+
+</body>
+</html>

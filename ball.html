@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random 8 Ball</title>
+
+<meta charset="UTF-8">
+<meta name="description" content="Random 8 Ball generator using fisher–yates shuffle algorithm">
+<meta name="keywords" content="Random Generators">
+<meta name="author" content="Corvus Cornix">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="style.css"/>
+<script src="shuffle.js"></script>
+
+</head>
+<body>
+
+  <p style="text-align: center; color: white; padding-bottom: 40px;">
+   Ask question then tap the ball to generate answer.
+  </p>
+  <div class="toy">
+  <div class="ball" onclick="myFunction()">
+  <div class="window" onclick="myFunction()">
+  <div id="magic" class="triangle up"></div>
+  </div>
+  </div>
+  </div>
+
+  <style>
+.toy {
+  position: relative;
+  display: block;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ball {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 70vmin;
+  height: 70vmin;
+  overflow: hidden!important;
+  background: radial-gradient(circle at 30vmin 30vmin, #121212, #242424);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.triangle {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: auto;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-variant: small-caps;
+  font-size: 2.1vmin;
+  line-height: 2.4vmin;
+  opacity: 1;
+  transition: opacity 1s;
+  animation: floating 6s linear infinite;
+  margin-top: 50%;
+}
+.triangle::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  border-left: 8.8vmin solid transparent;
+  border-right: 8.8vmin solid transparent;
+  border-radius: 0.4vmin;
+  width: 0.4vmin;
+  height: 0;
+}
+.triangle.up::before {
+  border-bottom: 15.2vmin solid #1c23e8;
+}
+
+.triangle.down::before {
+  border-top: 15.2vmin solid #1c23e8;
+}
+.triangle::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to left, rgba(0,0,0,0.9), rgba(0,0,0,0));
+  animation: rotating 6s infinite linear;
+}
+.window {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25%;
+  width: 35vmin;
+  height: 35vmin;
+  border-radius: 50%;
+  background: radial-gradient(#002, #001 18vmin, #000 18vmin, #000 18.5vmin, #000 22vmin, #000 22vmin, #000 22.5vmin);
+  overflow: hidden!important;
+}
+@keyframes random {
+  to {
+    transform: translateY(-1710vmin);
+  }
+}
+@keyframes floating {
+  from {
+    transform: rotateZ(0) rotateY(15deg) translateZ(6.8vmin) rotateZ(0);
+  }
+  to {
+    transform: rotateZ(1turn) rotateY(15deg) translateZ(6.8vmin) rotateZ(-1turn);
+  }
+}
+@keyframes rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+</style>
+
+<script>
+function myFunction() {
+
+var arr = ["As I see it, yes.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don’t count on it.", "It is certain.", "It is decidedly so.", "Most likely.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Outlook good.", "Reply hazy, try again.", "Signs point to yes.", "Very doubtful.", "Without a doubt.", "Yes", "Yes – definitely.", " You may rely on it."];
+
+
+arr = shuffle(arr);
+var chosen = arr;
+
+document.getElementById("magic").innerHTML = chosen[0];
+var element = document.getElementById("magic");
+
+}
+</script>
+
+<div class="blockmenus">
+<div class="carded">
+<a class="carde" href="coin.html">
+<img loading="lazy" src="2020/04/coin.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Coin Flip
+</h4>
+<p>
+Random coin flip using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="color.html">
+<img loading="lazy" src="2020/01/color-wheel.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Color Generator
+</h4>
+<p>
+Random color generator that contain all color combinations using Fisher-Yates algorithm
+</p>
+</a>
+<a class="carde" href="password.html">
+<img loading="lazy" src="2020/01/digital-key.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Password Generator
+</h4>
+<p>
+Random password generator with lots of settings.
+</p>
+</a>
+<a class="carde" href="alphabet.html">
+<img loading="lazy" src="2020/01/alphabet.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random alphabet letter
+</h4>
+<p>
+Random Alphabet letter using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="gradient.html">
+<img loading="lazy" src="2020/03/brush.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Gradient Generator
+</h4>
+<p>
+Random gradient color generator that contain all color combinations using Fisher-Yates algorithm.
+</p>
+</a>
+<a class="carde" href="country.html">
+<img loading="lazy" src="2020/04/world.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Country Generator
+</h4>
+<p>
+Random country name using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="yesno.html">
+<img loading="lazy" src="2020/03/wrong.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Yes or No
+</h4>
+<p>
+Random Yes or No using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="numbers.html">
+<img loading="lazy" src="2020/03/countdown.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random Numbers Generator
+</h4>
+<p>
+Random number generator with lot of options.
+</p>
+</a>
+<a class="carde" href="rock.html">
+<img loading="lazy" src="2020/03/gaming.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Rock paper scissors
+</h4>
+<p>
+Random Rock paper scissors using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="cards.html">
+<img loading="lazy" src="2020/03/poker.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Card
+</h4>
+<p>
+Random Playing Cards using Fisher-Yates algorthm
+
+    </p>
+</a>
+<a class="carde" href="ball.html">
+<img loading="lazy" src="2020/04/eight.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Magic 8-Ball
+</h4>
+<p>
+Random Magic 8-Ball using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="states.html">
+<img loading="lazy" src="2020/04/america.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Random US States
+</h4>
+<p>
+Random US States using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="dice.html">
+<img loading="lazy" src="2020/04/dice.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Dice
+</h4>
+<p>
+Random Roll the dice using Fisher-Yates algorthm
+</p>
+</a>
+<a class="carde" href="choise.html">
+<img loading="lazy" src="2020/04/choises.png" alt="" class="et-waypoint et_pb_animation_off wp-image-640 et-animated" width="128" height="128">
+<h4>
+Choise
+</h4>
+<p>
+Random Choise generator
+</p>
+</a>
+</div>
+</div>
+
+
+</body>
+</html>
