@@ -14,7 +14,33 @@
 
 </head>
 <body>
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">Random Generator</a>
+  <div id="myLinks">
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 
+
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+<!-- Top Navigation Menu -->
 
   <audio id="myAudio">
     <source src="2020/04/roll.wav" type="audio/ogg">
