@@ -15,22 +15,21 @@ body{
 	background: transparent!important;
 }
 .carde {
-  color: white;
-	text-align: center;
-
-	background-color: #242424;
-border-radius: 10px 10px 10px 10px;
-overflow: hidden;
-padding-top: 50px;
-padding-right: 30px;
-padding-bottom: 50px;
-padding-left: 30px;
-box-shadow: 6px 6px 18px 0px rgba(0,0,0,0.3);
-text-decoration: none;
+ color: white;
+ text-align: center;
+ background-color: #242424;
+ border-radius: 10px 10px 10px 10px;
+ overflow: hidden;
+ padding-top: 50px;
+ padding-right: 30px;
+ padding-bottom: 50px;
+ padding-left: 30px;
+ box-shadow: 6px 6px 18px 0px rgba(0,0,0,0.3);
+ text-decoration: none;
 }
 .carde h4{
-	font-size: 20px;
-	text-transform: uppercase;
+ font-size: 20px;
+ text-transform: uppercase;
 }
 .carded {
   max-width: 1200px;
@@ -162,7 +161,7 @@ color: white;
 
 .topnav #myLinks {
   display: none;
-  background: #AB47BC;
+  background: #BB86FC;
 }
 
 .topnav a {
@@ -175,7 +174,7 @@ color: white;
 }
 
 .topnav a.icon {
-  background: #7E57C2;
+  background: #BB86FC;
   display: block;
   position: absolute;
   right: 0;
