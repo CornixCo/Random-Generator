@@ -72,8 +72,8 @@ text-transform: uppercase;
 <button id="coin" class="gold" onclick="myFunction();playAudio()"></button>
 
 <script>
-jQuery('button').on('click', function() { jQuery(this).addClass('animated flip').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() { jQuery(this).removeClass('animated flip'); }); });
-  jQuery('button').on('click', function() { jQuery(this).addClass('animated bounceIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() { jQuery(this).removeClass('animated bounceIn'); }); });
+jQuery('.gold').on('click', function() { jQuery(this).addClass('animated flip').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() { jQuery(this).removeClass('animated flip'); }); });
+  jQuery('.gold').on('click', function() { jQuery(this).addClass('animated bounceIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() { jQuery(this).removeClass('animated bounceIn'); }); });
 </script>
 <script>
 var x = document.getElementById("myAudio");
