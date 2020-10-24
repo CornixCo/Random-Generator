@@ -56,7 +56,7 @@
 ********************************************************************/
 
 .playingCards .card.diams {
-   color: #ef9a9a!important;
+   color: #BB86FC!important;
 }
 
 .playingCards.fourColours .card.diams {
@@ -68,7 +68,7 @@
 }
 
 .playingCards .card.hearts {
-   color: #ef9a9a!important;
+   color: #BB86FC!important;
 }
 
 .playingCards .card.spades {
@@ -96,7 +96,7 @@
 }
 
 .playingCards .card.joker.big {
-   color: #ef9a9a!important;
+   color: #BB86FC!important;
 }
 
 
