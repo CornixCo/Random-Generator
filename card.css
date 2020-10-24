@@ -986,3 +986,9 @@
    left: 62px;
    bottom: 31px;
 }
+#cardArea{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
