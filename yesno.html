@@ -69,8 +69,10 @@ function menus() {
 
   <script>
 function myFunction() {
-arr = shuffle(arr);
 
+var arr = ["YES", "NO"];
+
+arr = shuffle(arr);
 
 var chosen = arr;
 
@@ -78,6 +80,7 @@ document.getElementById("coin").innerHTML = chosen[0];
 
 var element = document.getElementById("coin");
 
+document.getElementById('coin').value = chosen[0];
 }
 </script>
 <script>
